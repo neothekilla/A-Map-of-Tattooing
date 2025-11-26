@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="./carte.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=PP+Neue+Montreal+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@500&display=swap" rel="stylesheet">
+
+  <title>A MAP OF TATTOOING</title>
+</head>
+
+<body>
+
+  <div class="homepage-container"></div>
+
+  <header class="site-header">
+    <a href="balade.html" class="map-link">
+      <h1 class="a-map-of-tattooing">{A MAP OF TATTOOING}</h1>
+    </a>
+    <div class="decorative-plus">[+]</div>
+    <a href="Repertoire.html" class="header-index-button">{index}</a>
+
+
+    <nav class="component-2">
+      <button class="category-button" data-category="ascii">[Ascii]</button>
+      <button class="category-button" data-category="cp437">[CP437]</button>
+      <button class="category-button" data-category="dithering">[Dithering]</button>
+      <button class="category-button" data-category="halftone">[Halftone]</button>
+      <button class="category-button" data-category="pixel">[Pixel]</button>
+    </nav>
+  </header>
+
+  <!-- Carte des corps -->
+  <div class="body-map">
+    <!-- Corps face -->
+    <div class="figure figure-left">
+      <img src="assets/corps-face.png" alt="Corps face" />
+      <div id="zone-main-gauche" class="zone zone-main-gauche" data-popup-id="popup-main-gauche" data-category="ascii"></div>
+
+      <!-- Corps face PIXEL -->
+      <div class="zone zone-pixel-bras-droit" data-popup-id="popup-pixel-bras-droit" data-category="pixel"></div>
+      <div class="zone zone-pixel-genoux-g" data-popup-id="popup-pixel-genoux-g" data-category="pixel"></div>
+      <div class="zone zone-ornement-droit-pixel" data-popup-id="popup-pixel-ornement-bras-d" data-category="pixel"></div>
+      <div class="zone zone-signature-pixel-g" data-popup-id="popup-pixel-signature-g" data-category="pixel,cp437"></div>
+      <div class="zone zone-crane-pixel-g" data-popup-id="popup-crane-pixel-g" data-category="pixel"></div>
+      <div class="zone zone-swag-pixel" data-popup-id="popup-swag-pixel" data-category="pixel"></div>
+      <div class="zone zone-b-gothic-pixel" data-popup-id="popup-b-pixel" data-category="pixel"></div>
+      <div class="zone zone-script-pixel" data-popup-id="popup-script-pixel" data-category="pixel"></div>
+      <div class="zone zone-hello-kitty-pixel" data-popup-id="popup-hello-kitty-pixel" data-category="pixel"></div>
+      <div class="zone zone-pixel3" data-popup-id="popup-pixel3" data-category="pixel"></div>
+      <div class="zone zone-pixel-clown" data-popup-id="popup-pixel-clown" data-category="pixel"></div>
+      <div class="zone zone-pixel-omega" data-popup-id="popup-pixel-omega" data-category="pixel"></div>
+      <div class="zone zone-pixel5" data-popup-id="popup-pixel5" data-category="pixel"></div>
+      <div class="zone zone-pixel6" data-popup-id="popup-pixel6" data-category="pixel"></div>
+      <div class="zone zone-pixel8" data-popup-id="popup-pixel8" data-category="pixel"></div>
+      <div class="zone zone-pixel9" data-popup-id="popup-pixel9" data-category="pixel"></div>
+      <div class="zone zone-pixel11" data-popup-id="popup-pixel11" data-category="pixel"></div>
+     
+
+      <!-- Corps face HALFTONE -->
+      <div class="zone zone-half-bras-g" data-popup-id="popup-half-bras-g" data-category="halftone"></div>
+      <div class="zone zone-half-bras-g2" data-popup-id="popup-half-bras-g2" data-category="halftone"></div>
+      <div class="zone zone-half-bras-g3" data-popup-id="popup-half-bras-g3" data-category="halftone"></div>
+      <div class="zone zone-half-ventre" data-popup-id="popup-half-ventre" data-category="halftone"></div>
+      <div class="zone zone-half10" data-popup-id="popup-half10" data-category="halftone"></div>
+      <div class="zone zone-half11" data-popup-id="popup-half11" data-category="halftone"></div>
+      <div class="zone zone-half13" data-popup-id="popup-half13" data-category="halftone"></div>
+      <div class="zone zone-half14" data-popup-id="popup-half14" data-category="halftone"></div>
+      <div class="zone zone-half16" data-popup-id="popup-half16" data-category="halftone"></div>
+
+      <!-- Corps face DITHERING -->
+      <div class="zone zone-dither2" data-popup-id="popup-dither2" data-category="dithering"></div>
+      <div class="zone zone-dither4" data-popup-id="popup-dither4" data-category="dithering"></div>
+      <div class="zone zone-dither5" data-popup-id="popup-dither5" data-category="dithering"></div>
+      <div class="zone zone-dither6" data-popup-id="popup-dither6" data-category="dithering"></div>
+
+
+        <!-- Corps face CP437 -->
+        <div class="zone zone-CP4372" data-popup-id="popup-CP4372" data-category="cp437, ascii"></div>
+        <div class="zone zone-CP4373" data-popup-id="popup-CP4373" data-category="cp437, ascii"></div>
+     
+
+      <!-- Corps face ASCII  -->
+      <div class="zone zone-epaule-gauche" data-popup-id="popup-epaule-gauche" data-category="ascii"></div>
+      <div class="zone zone-bras-droit" data-popup-id="popup-bras-droit" data-category="ascii"></div>
+      <div class="zone zone-cote-droite" data-popup-id="popup-cote-droite" data-category="ascii"></div>
+      <div class="zone zone-bassin-gauche-face" data-popup-id="popup-bassin-gauche-face" data-category="ascii"></div>
+      <div class="zone zone-cuisse-droit" data-popup-id="popup-cuisse-droit" data-category="ascii"></div>
+      <div class="zone zone-tibia-droit-face" data-popup-id="popup-tibia-droit-face" data-category="ascii"></div>
+      <div class="zone zone-tibia-gauche-face" data-popup-id="popup-tibia-gauche-face" data-category="ascii"></div>
+      <div class="zone zone-chat-ascii" data-popup-id="popup-chat-ascii" data-category="ascii"></div>
+      <div class="zone zone-avant-bras-droit-face" data-popup-id="popup-avant-bras-droit" data-category="ascii,cp437"></div>
+      <div class="zone zone-ascii-bras2" data-popup-id="popup-ascii-bras2" data-category="ascii"></div>
+      <div class="zone zone-ascii-crane2" data-popup-id="popup-ascii-crane2" data-category="ascii"></div>
+      <div class="zone zone-ascii-dauphin2" data-popup-id="popup-ascii-dauphin2" data-category="ascii"></div>
+      <div class="zone zone-ascii6" data-popup-id="popup-ascii6" data-category="ascii"></div>
+      <div class="zone zone-ascii-musique" data-popup-id="popup-ascii-musique" data-category="ascii"></div>
+      <div class="zone zone-ascii-fee" data-popup-id="popup-ascii-fee" data-category="ascii"></div>
+      <div class="zone zone-ascii-chat2" data-popup-id="popup-ascii-chat2" data-category="ascii"></div>
+      <div class="zone zone-ascii12" data-popup-id="popup-ascii12" data-category="ascii"></div>
+      <div class="zone zone-ascii-lapin2" data-popup-id="popup-ascii-lapin2" data-category="ascii"></div>
+    </div>
+   
+
+   
+  
+
+    <!-- Corps dos ASCII-->
+    <div class="figure figure-right">
+      <img src="assets/corps-dos.png" alt="Corps dos" />
+      <div class="zone zone-bas-dos-droite" data-popup-id="popup-bas-dos-droite" data-category="ascii,halftone"></div>
+      <div class="zone zone-jambe-droite" data-popup-id="popup-jambe-droite" data-category="ascii"></div>
+      <div class="zone zone-ascii5" data-popup-id="popup-ascii5" data-category="ascii"></div>
+      <div class="zone zone-ascii-dos2" data-popup-id="popup-ascii-dos2" data-category="ascii"></div>
+
+      <!-- Corps dos PIXEL -->
+      <div class="zone zone-pixel-epaule-g" data-popup-id="popup-pixel-epaule-g" data-category="pixel"></div>
+      <div class="zone zone-dos-pixel" data-popup-id="popup-pixel-dos" data-category="pixel"></div>
+      <div class="zone zone-pixel-dos-danger" data-popup-id="popup-danger-pixel-dos" data-category="pixel"></div>
+      <div class="zone zone-pixel-bambi-dos" data-popup-id="popup-bambi-pixel-dos" data-category="pixel"></div>
+      <div class="zone zone-pixel2" data-popup-id="popup-pixel2" data-category="pixel"></div>
+      <div class="zone zone-pixel4" data-popup-id="popup-pixel4" data-category="pixel"></div>
+      <div class="zone zone-pixel7" data-popup-id="popup-pixel7" data-category="pixel"></div>
+      <div class="zone zone-pixel10" data-popup-id="popup-pixel10" data-category="pixel,cp437"></div>
+
+
+         <!-- Corps dos HALFTONE -->
+         <div class="zone zone-half-dos" data-popup-id="popup-half-dos" data-category="halftone"></div>
+         <div class="zone zone-half-dos2" data-popup-id="popup-half-dos2" data-category="halftone"></div>
+         <div class="zone zone-half12" data-popup-id="popup-half12" data-category="halftone"></div>
+         <div class="zone zone-half15" data-popup-id="popup-half15" data-category="halftone"></div>
+
+
+           <!-- Corps dos DITHERING -->
+           <div class="zone zone-bit-cheval" data-popup-id="popup-bit-cheval" data-category="dithering"></div>
+           <div class="zone zone-dither1" data-popup-id="popup-dither1" data-category="dithering"></div>
+           <div class="zone zone-dither-kiss" data-popup-id="popup-dither-kiss" data-category="dithering"></div>
+           <div class="zone zone-dither3" data-popup-id="popup-dither3" data-category="dithering"></div>
+           <div class="zone zone-dither-marylin" data-popup-id="popup-dither-marylin" data-category="dithering"></div>
+
+            <!-- Corps dos CP437 -->
+      <div class="zone zone-cp4371" data-popup-id="popup-CP4371" data-category="CP437"></div>
+      <div class="zone zone-CP4374" data-popup-id="popup-CP4374" data-category="CP437"></div>
+        
+      
+     
+   
+    </div>
+  </div>
+
+  <!-- Popup ASCII face -->
+  <div class="image-popup" id="popup-main-gauche">
+    <img src="assets/zone-main-gauche.jpg" alt="Tatouage main gauche" />
+  </div>
+  <div class="image-popup" id="popup-epaule-gauche">
+    <img src="assets/zone-epaule-gauche.jpg" alt="Tatouage epaule gauche" />
+  </div>
+  <div class="image-popup" id="popup-bras-droit">
+    <img src="assets/zone-bras-gauche.jpg" alt="Tatouage bras droit EToile" />
+  </div>
+  <div class="image-popup" id="popup-bassin-gauche-face">
+    <img src="assets/bassin-droit-face.jpg" alt="Tatouage bassin gauche men walkking face" />
+  </div>
+  <div class="image-popup" id="popup-cote-droite">
+    <img src="assets/zone-cote-gauche.jpg" alt="Tatouage cote droite Papillon" />
+  </div>
+  <div class="image-popup" id="popup-cuisse-droit">
+    <img src="assets/zone-cuisse-gauche.jpg" alt="Tatouage cuisse droit chevalier" />
+  </div>
+  <div class="image-popup" id="popup-tibia-droit-face">
+    <img src="assets/tibia-droit-face.jpg" alt="Tatouage tibia droit face" />
+  </div>
+  <div class="image-popup" id="popup-tibia-gauche-face">
+    <img src="assets/tibia-gauche-face.jpg" alt="Tatouage tibia gauche face" />
+  </div>
+  <div class="image-popup" id="popup-chat-ascii">
+    <img src="assets/Ascii-chat.jpg" alt="Tatouage ascii chat face" />
+  </div>
+  <div class="image-popup" id="popup-ascii-bras2">
+    <img src="assets/ascii-4.jpg" alt="Tatouage ascii kiki" />
+  </div>
+  <div class="image-popup" id="popup-ascii-crane2">
+    <img src="assets/ascii-crane2.jpg" alt="Tatouage ascii de crane" />
+  </div>
+  <div class="image-popup" id="popup-ascii-dauphin2">
+    <img src="assets/ascii-dauphin2.jpg" alt="Tatouage ascii dauphin tout mignon" />
+  </div>
+  <div class="image-popup" id="popup-ascii6">
+    <img src="assets/ascii-6.jpg" alt="Tatouage ascii sur côtes" />
+  </div>
+  <div class="image-popup" id="popup-ascii-musique">
+    <img src="assets/ascii-musique.jpg" alt="Tatouage ascii note de musique" />
+  </div>
+  <div class="image-popup" id="popup-ascii-chat2">
+    <img src="assets/ascii-chat2.jpg" alt="Tatouage ascii chats sur ventre" />
+  </div>
+  <div class="image-popup" id="popup-ascii-fee">
+    <img src="assets/ascii7.jpg" alt="Tatouage ascii fée" />
+  </div>
+  <div class="image-popup" id="popup-ascii-lapin2">
+    <img src="assets/ascii-lapin2.jpg" alt="Tatouage ascii lapin chou" />
+  </div>
+  <div class="image-popup" id="popup-ascii12">
+    <img src="assets/ascii-12.jpg" alt="Tatouage ascii12" />
+  </div>
+ 
+
+  <!-- PIXEL Popup Face -->
+  <div class="image-popup" id="popup-pixel-bras-droit">
+    <img src="assets/pixel-bras-droit.jpg" alt="Tatouage pixel bras droit" />
+  </div>
+  <div class="image-popup" id="popup-pixel-genoux-g">
+    <img src="assets/pixel-genoux-g.jpg" alt="Tatouage pixel genoux gauche" />
+  </div>
+  <div class="image-popup" id="popup-pixel-ornement-bras-d">
+    <img src="assets/pixel-ornement-bras-d.png" alt="Tatouage ornement bras d" />
+  </div>
+  <div class="image-popup" id="popup-pixel-signature-g">
+    <img src="assets/CP:Pixel-signature.png" alt="Tatouage signature pixel d" />
+  </div>
+  <div class="image-popup" id="popup-crane-pixel-g">
+    <img src="assets/crane-pixel-b.png" alt="Tatouage signature pixel d" />
+  </div>
+  <div class="image-popup" id="popup-swag-pixel">
+    <img src="assets/swag-pixel.png" alt="Tatouage swag face" />
+  </div>
+  <div class="image-popup" id="popup-b-pixel">
+    <img src="assets/B-gothic-pixel.png" alt="Tatouage b gothic face" />
+  </div>
+  <div class="image-popup" id="popup-script-pixel">
+    <img src="assets/script-pixel.png" alt="Tatouage script pixel " />
+  </div>
+  <div class="image-popup" id="popup-hello-kitty-pixel">
+    <img src="assets/hello-kitty-pixel.png" alt="Tatouage hello kitty pixel " />
+  </div>
+  <div class="image-popup" id="popup-pixel3">
+    <img src="assets/pixel3.jpg" alt="Tatouage  pixel yapatattoo " />
+  </div>
+  <div class="image-popup" id="popup-pixel-clown">
+    <img src="assets/pixel-clown.jpg" alt="Tatouage  pixel clown " />
+  </div>
+  <div class="image-popup" id="popup-pixel5">
+    <img src="assets/pixel5.jpg" alt="Tatouage  pixel coeur " />
+  </div>
+  <div class="image-popup" id="popup-pixel8">
+    <img src="assets/pixel8.jpg" alt="Tatouage  cheval profil cou" />
+  </div>
+  <div class="image-popup" id="popup-pixel9">
+    <img src="assets/pixel9.jpg" alt="Tatouage  cheval bras cou" />
+  </div>
+  <div class="image-popup" id="popup-pixel11">
+    <img src="assets/pixel11.jpg" alt="Tatouage  cheval bras cou" />
+  </div>
+
+
+   <!-- HALFTONE Popup Face -->
+   <div class="image-popup" id="popup-half-bras-g">
+    <img src="assets/halftone9.jpg" alt="Tatouage halftone bras gauche" />
+  </div>
+  <div class="image-popup" id="popup-half-bras-g2">
+    <img src="assets/halftone2.jpg" alt="Tatouage halftone bras gauche2" />
+  </div>
+  <div class="image-popup" id="popup-half-bras-g3">
+    <img src="assets/halftone7.jpg" alt="Tatouage halftone ornement bras gauche3" />
+  </div>
+  <div class="image-popup" id="popup-half-ventre">
+    <img src="assets/halftone4.jpg" alt="Tatouage halftone ventre" />
+  </div>
+  <div class="image-popup" id="popup-half10">
+    <img src="assets/halftone10.jpg" alt="Tatouage halftone bubulles" />
+  </div>
+  <div class="image-popup" id="popup-half11">
+    <img src="assets/halftone11.jpg" alt="Tatouage halftone 3 signes bras g" />
+  </div>
+  <div class="image-popup" id="popup-half13">
+    <img src="assets/halftone13.jpg" alt="Tatouage halftone " />
+  </div>
+  <div class="image-popup" id="popup-half14">
+    <img src="assets/halftone14.jpg" alt="Tatouage halftone " />
+  </div>
+  <div class="image-popup" id="popup-half16">
+    <img src="assets/halftone16.jpg" alt="Tatouage halftone " />
+  </div>
+
+
+  <!-- CP437 Popup Face -->
+   <div class="image-popup" id="popup-CP4372">
+   <img src="assets/CP4372.jpg" alt="Tatouage cp437 crane bras d" />
+   </div>
+
+  <div class="image-popup" id="popup-CP4373">
+  <img src="assets/CP4373.jpg" alt="Tatouage cp437 jambe" />
+  </div>
+
+
+  <!-- DITHERING Popup Face -->
+  <div class="image-popup" id="popup-dither2">
+    <img src="assets/dithering2.jpg" alt="Tatouage dither rose cuisse" />
+    </div>
+    <div class="image-popup" id="popup-dither4">
+      <img src="assets/dither4.jpg" alt="Tatouage dither bras cheval" />
+      </div>
+      <div class="image-popup" id="popup-dither5">
+        <img src="assets/dither5.jpg" alt="Tatouage dither bras cheval" />
+        </div>
+        <div class="image-popup" id="popup-dither6">
+          <img src="assets/dither6.jpg" alt="Tatouage dither bras cheval" />
+          </div>
+
+  <!-- Popup ASCII corps Dos -->
+  <div class="image-popup" id="popup-bas-dos-droite">
+    <img src="assets/zone-bas-dos-droit.jpg" alt="Tatouage bas dos droite" />
+  </div>
+  <div class="image-popup" id="popup-avant-bras-droit">
+    <img src="assets/zone-avant-bras-droit.jpg" alt="Tatouage avant bras droit" />
+  </div>
+  <div class="image-popup" id="popup-ascii5">
+    <img src="assets/ascii-5.jpg" alt="Tatouage ascii 5 dos" />
+  </div>
+  <div class="image-popup" id="popup-jambe-droite">
+    <img src="assets/zone-jambe-droite.jpg" alt="Tatouage jambe droite" />
+  </div>
+  <div class="image-popup" id="popup-ascii-dos2">
+    <img src="assets/ascii-dos2.jpg" alt="Tatouage ascii manga dos" />
+  </div>
+
+  <!-- PIXEL Popup dos -->
+  <div class="image-popup" id="popup-pixel-epaule-g">
+    <img src="assets/pixel-epaule-g.jpg" alt="Tatouage pixel epaule gauche" />
+  </div>
+  <div class="image-popup" id="popup-pixel-dos">
+    <img src="assets/zone-pixel-dos.png" alt="Tatouage pixel dos" />
+  </div>
+  <div class="image-popup" id="popup-danger-pixel-dos">
+    <img src="assets/Danger-pixel-dos.jpg" alt="Tatouage pixel dos" />
+  </div>
+  <div class="image-popup" id="popup-bambi-pixel-dos">
+    <img src="assets/bambi-pixel-dos.png" alt="Tatouage pixel dos" />
+  </div>
+  <div class="image-popup" id="popup-pixel2">
+    <img src="assets/pixel2.jpg" alt="Tatouage pixel bras d " />
+  </div>
+   <div class="image-popup" id="popup-pixel4">
+    <img src="assets/pixel4.jpg" alt="Tatouage  pixel croix dos " />
+  </div>
+  <div class="image-popup" id="popup-pixel-omega">
+    <img src="assets/pixel-omega.jpg" alt="Tatouage  pixel omega script " />
+  </div>
+
+  <div class="image-popup" id="popup-pixel7">
+    <img src="assets/pixel7.jpg" alt="Tatouage  pixel minotaure " />
+  </div>
+
+  <div class="image-popup" id="popup-pixel10">
+    <img src="assets/pixel10.jpg" alt="Tatouage  pixel cp437 " />
+  </div>
+
+
+  <div class="nav-column">
+    <button id="nav-left" class="nav-arrow">[⇦]</button>
+    <div class="decorative-plus">[+]</div>
+    <button id="nav-right" class="nav-arrow">[⇨]</button>
+  </div>
+
+
+   <!-- HALFTONE Popup Dos -->
+   <div class="image-popup" id="popup-half-dos">
+    <img src="assets/halftone8.jpg" alt="Tatouage halftone bcote ligne dos" />
+  </div>
+  <div class="image-popup" id="popup-half-dos2">
+    <img src="assets/halftone3.jpg" alt="Tatouage halftone ornement dos" />
+  </div>
+  <div class="image-popup" id="popup-half12">
+    <img src="assets/halftone12.jpg" alt="Tatouage halftone ornement dos 2" />
+  </div>
+  <div class="image-popup" id="popup-half15">
+    <img src="assets/halftone15.jpg" alt="Tatouage halftone fleur " />
+  </div>
+
+
+    <!-- DITHERING Popup Dos -->
+    <div class="image-popup" id="popup-bit-cheval">
+      <img src="assets/bitmap1-cheval.jpg" alt="Tatouage dithering cheval dos" />
+    </div>
+    <div class="image-popup" id="popup-dither1">
+      <img src="assets/dither1.jpg" alt="Tatouage dithering NOEUD bas du dos" />
+    </div>
+    <div class="image-popup" id="popup-dither-kiss">
+      <img src="assets/dither-kiss.jpg" alt="Tatouage dithering kiss fesse" />
+    </div>
+    <div class="image-popup" id="popup-dither3">
+      <img src="assets/dither3.jpg" alt="Tatouage dithering dos2" />
+    </div>
+    <div class="image-popup" id="popup-dither-marylin">
+      <img src="assets/dither-marylin.jpg" alt="Tatouage dithering marylin-fesse" />
+    </div>
+
+      <!-- CP437 Popup Dos -->
+      <div class="image-popup" id="popup-CP4371">
+        <img src="assets/CP437-dos.jpg" alt="Tatouage cp437 dos" />
+      </div>
+      <div class="image-popup" id="popup-CP4374">
+        <img src="assets/CP4374.jpg" alt="Tatouage cp437 main" />
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        
+          /* -----------------------------------------------------------
+             VARIABLES
+          ----------------------------------------------------------- */
+          const zones = document.querySelectorAll('.zone');
+          const popups = document.querySelectorAll('.image-popup');
+          const categoryButtons = document.querySelectorAll('.category-button');
+          const navLeft = document.getElementById('nav-left');
+          const navRight = document.getElementById('nav-right');
+        
+          let activeCategories = [];
+          let currentZoneIndex = 0;
+          let isScrolling = false;
+          const scrollCooldown = 300;
+        
+          let activePopupId = null;
+        
+        
+        
+          /* -----------------------------------------------------------
+             OUTILS
+          ----------------------------------------------------------- */
+        
+          function closeAllPopupsAndDeactivateZones() {
+            popups.forEach(p => {
+              p.classList.remove('active');
+              p.classList.remove('hover-preview');
+            });
+        
+            zones.forEach(z => z.classList.remove('active-zone'));
+        
+            activePopupId = null;
+        
+            // Nettoyer le hash dans l’URL
+            history.replaceState("", document.title, window.location.pathname);
+          }
+        
+          function filterZones() {
+            zones.forEach(zone => {
+              const cats = zone.getAttribute('data-category');
+              if (!cats) {
+                zone.style.display = 'none';
+                return;
+              }
+              const zoneCategories = cats.split(',').map(c => c.trim().toLowerCase());
+        
+              if (activeCategories.length === 0) {
+                zone.style.display = 'block';
+              } else {
+                const hasAll = activeCategories.every(cat => zoneCategories.includes(cat));
+                zone.style.display = hasAll ? 'block' : 'none';
+              }
+            });
+          }
+        
+          function updateActiveButtons() {
+            categoryButtons.forEach(btn => {
+              const cat = btn.getAttribute('data-category').toLowerCase();
+              btn.classList.toggle('active-category', activeCategories.includes(cat));
+            });
+          }
+        
+          function getVisibleZones() {
+            return Array.from(zones).filter(z => z.offsetParent !== null);
+          }
+        
+          function showZoneAndPopup(zone) {
+            const popupId = zone.getAttribute('data-popup-id');
+            if (!popupId) return;
+        
+            const popup = document.getElementById(popupId);
+            if (!popup) return;
+        
+            closeAllPopupsAndDeactivateZones();
+        
+            popup.classList.add('active');
+            zone.classList.add('active-zone');
+            activePopupId = popupId;
+        
+            popup.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        
+        
+        
+          /* -----------------------------------------------------------
+             SCROLL ET NAV
+          ----------------------------------------------------------- */
+          window.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaX) < 10 || isScrolling) return;
+        
+            const dir = e.deltaX > 0 ? 1 : -1;
+            scrollToNextZone(dir);
+        
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, scrollCooldown);
+        
+            e.preventDefault();
+          }, { passive: false });
+        
+          function scrollToNextZone(dir) {
+            const visibleZones = getVisibleZones();
+            if (visibleZones.length === 0) return;
+        
+            currentZoneIndex = (currentZoneIndex + dir + visibleZones.length) % visibleZones.length;
+            showZoneAndPopup(visibleZones[currentZoneIndex]);
+          }
+        
+          function handleArrowClick(dir) {
+            if (isScrolling) return;
+        
+            scrollToNextZone(dir === 'left' ? -1 : 1);
+        
+            const nav = dir === 'left' ? navLeft : navRight;
+            if (nav) {
+              nav.classList.add('active');
+              setTimeout(() => nav.classList.remove('active'), 200);
+            }
+        
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, scrollCooldown);
+          }
+        
+          navLeft?.addEventListener('click', () => handleArrowClick('left'));
+          navRight?.addEventListener('click', () => handleArrowClick('right'));
+        
+          window.addEventListener('keydown', (e) => {
+            if (isScrolling) return;
+        
+            if (e.key === 'ArrowLeft') {
+              e.preventDefault();
+              handleArrowClick('left');
+            } else if (e.key === 'ArrowRight') {
+              e.preventDefault();
+              handleArrowClick('right');
+            }
+          });
+        
+        
+        
+          /* -----------------------------------------------------------
+             CATEGORIES
+          ----------------------------------------------------------- */
+          categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+        
+              const cat = btn.getAttribute('data-category').toLowerCase();
+        
+              if (activeCategories.includes(cat)) {
+                activeCategories = activeCategories.filter(c => c !== cat);
+              } else {
+                activeCategories.push(cat);
+              }
+        
+              filterZones();
+              updateActiveButtons();
+              closeAllPopupsAndDeactivateZones();
+        
+              // Réécrire URL selon filtres
+              if (activeCategories.length) {
+                history.replaceState(null, '', '#' + activeCategories.join(','));
+              } else {
+                history.replaceState(null, '', window.location.pathname);
+              }
+        
+              currentZoneIndex = 0;
+            });
+          });
+        
+        
+        
+          /* -----------------------------------------------------------
+             ZONES (hover + click)
+          ----------------------------------------------------------- */
+          zones.forEach(zone => {
+            const popupId = zone.getAttribute('data-popup-id');
+            const popup = document.getElementById(popupId);
+            if (!popup) return;
+        
+            // CLIC = ouverture / fermeture
+            zone.addEventListener('click', e => {
+              e.stopPropagation();
+        
+              if (activePopupId === popupId) {
+                // Toggle OFF
+                closeAllPopupsAndDeactivateZones();
+              } else {
+                closeAllPopupsAndDeactivateZones();
+                popup.classList.add('active');
+                zone.classList.add('active-zone');
+                activePopupId = popupId;
+              }
+            });
+        
+            // HOVER = preview si rien d’ouvert
+            zone.addEventListener('mouseenter', () => {
+              if (!activePopupId) popup.classList.add('hover-preview');
+            });
+        
+            zone.addEventListener('mouseleave', () => {
+              popup.classList.remove('hover-preview');
+            });
+          });
+        
+        
+        
+          /* -----------------------------------------------------------
+             CHARGEMENT VIA HASH (filtres)
+          ----------------------------------------------------------- */
+          const rawHash = window.location.hash.slice(1).toLowerCase();
+          if (rawHash && !rawHash.startsWith("popup-")) {
+            const requested = rawHash.split(',').map(h => h.trim());
+            const validCats = Array.from(categoryButtons).map(btn => btn.getAttribute('data-category').toLowerCase());
+            activeCategories = requested.filter(cat => validCats.includes(cat));
+          }
+        
+          filterZones();
+          updateActiveButtons();
+        
+        
+        
+        
+          /* -----------------------------------------------------------
+             OUVERTURE DIRECTE DE POPUP DEPUIS balade.html
+             Exemple : Carte.html#popup-bras-gauche
+          ----------------------------------------------------------- */
+          const popupHash = window.location.hash;
+        
+          if (popupHash && popupHash.startsWith("#popup-")) {
+            const popup = document.querySelector(popupHash);
+        
+            if (popup) {
+              const zone = document.querySelector(`[data-popup-id="${popup.id}"]`);
+              closeAllPopupsAndDeactivateZones();
+        
+              popup.classList.add("active");
+              if (zone) zone.classList.add("active-zone");
+        
+              activePopupId = popup.id;
+        
+              popup.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+          }
+        
+        });
+        </script>
+        
+    
+  
+</body>
+</html>

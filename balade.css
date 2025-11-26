@@ -1,0 +1,131 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Dégradé de fond */
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffffde 17.11%, #ffffff 100%);
+    z-index: -2; /* En dessous de l'image */
+  }
+  
+  
+  /* Conteneur de fond */
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  /* Image dans le fond */
+  .background-image img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .horizontal-scroll {
+    display: flex;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+   
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .horizontal-scroll img {
+    height: 100vh;      /* prend toute la hauteur visible */
+    width: auto;        /* garde les proportions */
+    flex-shrink: 0;
+    filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+  }
+  
+  .floating-circle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 180px;
+    background-color: transparent;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Neue Montreal', sans-serif;; 
+  }
+  
+  
+  .circle-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .popup-panel {
+    background-color: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(08px);
+    padding: 5px 5px;
+    border-radius: 10px;
+    box-shadow: 5 2px 5px rgba(0, 0, 0, 0.2);
+    width: 120s%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2px 0;
+    font-size: 0.85rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .circle-list li {
+    margin-bottom: 4px;
+  }
+  
+  .circle-link {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+  
+  .circle-link:hover {
+    color: rgba(217, 255, 2, 0.8)
+  }
+
+  .floating-circle {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.10s ease;
+  }
+  
+  .floating-circle:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  

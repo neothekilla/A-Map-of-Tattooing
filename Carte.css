@@ -1,0 +1,657 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* évite le scroll horizontal */
+    overflow-y: hidden;
+    box-sizing: border-box;
+    cursor: crosshair;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Fond de page */
+  .homepage-container {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffde 17.11%, #ffffff 100%);
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .decorative-plus {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'PP Neue Montreal Mono', monospace;
+    font-size: 15px;
+    color: #353535;
+    pointer-events: none;
+  }
+
+  .header-index-button {
+    font-size: 12px;       /* plus petit */
+    color: #888;           /* gris clair */
+    font-family: 'PP Neue Montreal Mono', monospace;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none; /* enlever soulignement */
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    position: absolute;
+    right: 30px;       /* à droite, avec un petit padding */
+    top: 20px;         /* aligné verticalement avec le header */
+  }
+
+  .header-index-button:hover {
+    color: rgba(217, 255, 2, 1);
+    border-color: none
+    cursor: crosshair;
+  }
+  
+  .a-map-of-tattooing {
+    margin: 0;
+    font-size: 23.39px;
+    color: #353535;
+    font-family: 'Milling Triplex Trial VAR', sans-serif;
+    text-decoration: none;
+  }
+  
+  .a-map-of-tattooing:hover {
+
+    text-decoration: none;
+    cursor: crosshair;
+    color:rgba(217, 255, 2, 1)
+  }
+
+  .component-2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'PP Neue Montreal Mono', monospace;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  
+  .category-button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: #000;
+    padding: 6px 12px;
+    cursor: crosshair;
+  }
+  
+  .category-button:hover {
+    color: rgba(217, 255, 2);
+  }
+
+  .category-button.active-category {
+    color: rgba(217, 255, 2); /* vert fluo */
+    font-weight: bold;
+  }
+
+  .zone.active-zone {
+    background-color: rgba(217, 255, 2); /* vert clair semi-transparent */
+    /* tu peux ajuster la couleur et l’opacité à ta convenance */
+    outline: none; /* on enlève la bordure rouge */
+  }
+  
+  
+  
+  /* === CORPS ET ZONES INTERACTIVES === */
+  
+  .body-map {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 750px; /* espace entre les deux figures */
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .nav-column {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    font-family: 'PP Neue Montreal Mono', monospace;
+    z-index: 1000;
+  }
+  
+  .nav-arrow {
+    background: none;
+    border: none;
+    font-size: 1.3 rem;
+    color: rgb(26, 26, 26);
+    cursor: crosshair;
+    transition: color 0.2s;
+  }
+  
+  .nav-arrow.active {
+    color: rgba(217, 255, 2, 1); /* jaune fluo */
+  }
+  
+  .decorative-plus {
+    font-size:1.3 rem;
+    color: rgb(26, 26, 26);
+  }
+  
+
+  .figure {
+    position: relative;
+    width: 280px;
+    height: 560px;
+    flex-shrink: 0;
+  }
+  
+  .figure img {
+    height: 560px;
+    width: auto;
+    display: block;
+  }
+
+  .figure-right {
+    transform: translateX(30px); /* ou -100px pour la rapprocher */
+  }
+  
+  .figure-left {
+    transform: translateX(-80px); /* ou -100px pour la rapprocher */
+  }
+  
+  /* Zones interactives */
+  .zone {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0.176);
+    backdrop-filter: blur(05px);
+    border-radius: 50%;
+    cursor: crosshair;
+    transition: transform 0.2s ease;
+  }
+  
+  .zone:hover {
+    background-color: rgba(217, 255, 2, 1);
+    transform: scale(1.2);
+  }
+  
+  /*ASCII  Positions zones - corps-face */
+  .zone-epaule-gauche {
+    top: 20%;
+    left: 35%;
+  }
+  .zone-main-gauche {
+    top: 50%;
+    left: 10%;
+  }
+
+  .zone-bras-droit {
+    top: 28%;
+    left: 80%;
+  }
+
+  .zone-cote-droite {
+    top: 30%;
+    left: 65%;
+  }
+
+  .zone-bassin-gauche-face {
+    top: 37%;
+    left: 40%;
+  }
+
+  .zone-cuisse-droit {
+    top: 55%;
+    left:63%;
+  }
+
+  .zone-tibia-droit-face {
+    top: 80%;
+    left: 60%;
+  }
+
+  .zone-tibia-gauche-face {
+    top: 85%;
+    left: 45%;
+  }
+
+  .zone-chat-ascii{
+    top: 35%;
+    left: 39%;
+
+  }
+
+  .zone-avant-bras-droit-face {
+    top: 38%;
+    left: 83%;
+  }
+
+
+  .zone-ascii-bras2 {
+    top: 21%;
+    right: 20%;
+  }
+
+  .zone-ascii-crane2 {
+    top: 60%;
+    right: 55%;
+  }
+
+  .zone-ascii-dauphin2{
+    top: 78%;
+    right: 50%;
+  }
+
+  .zone-ascii6{
+    top: 30%;
+    right: 52%;
+  }
+
+  .zone-ascii-musique{
+    top: 82%;
+    right: 50%;
+  }
+
+  .zone-ascii-fee {
+    top: 18%;
+    left: 71%;
+  }
+
+  .zone-ascii-chat2{
+    top: 42%;
+    left: 52%;
+  }
+
+
+  .zone-ascii12{
+    top: 20%;
+    left: 77%;
+  }
+
+
+  .zone-ascii-lapin2{
+    top: 82%;
+    left: 38%;
+  }
+  
+  /* ASCII Positions zones - crops-dos */
+  .zone-bas-dos-droite {
+    top: 35%;
+    right: 20%;
+  }
+
+  .zone-jambe-droite {
+    top: 60%;
+    right: 35%;
+  }
+
+  .zone-ascii5{
+    top: 22%;
+    right: 15%;
+  }
+
+  .zone-ascii-dos2 {
+    top: 25%;
+    right: 27%;
+  }
+  
+
+ 
+
+ /*PIXELLL  Positions zones - corps-face */
+  .zone-pixel-bras-droit {
+    top: 30%;
+    right: 15%;
+  }
+
+  .zone-pixel-genoux-g{
+    top: 70%;
+    right: 50%;
+  }
+
+
+  .zone-ornement-droit-pixel {
+    top: 30%;
+    right: 70%; 
+  }
+
+  .zone-crane-pixel-g{
+    top: 37%;
+    right: 72%; 
+  }
+
+  .zone-swag-pixel{
+    top: 12%;
+    right: 41%; 
+  }
+
+  .zone-b-gothic-pixel{
+    top: 09%;
+    right: 36%; 
+  }
+
+  .zone-script-pixel{
+    top: 37%;
+    right: 06%; 
+  }
+
+.zone-hello-kitty-pixel{
+  top: 82%;
+  right: 33%;
+}
+
+.zone-pixel3 {
+  top: 20%;
+  right: 16%; 
+}
+
+.zone-pixel-clown {
+  top: 25%;
+  right: 18%; 
+}
+
+.zone-pixel-omega {
+  top: 42%;
+  right: 42%; 
+}
+
+.zone-pixel6 {
+  top: 23%;
+  right: 66%;
+}
+
+.zone-pixel8 {
+  top: 15%;
+  right: 41%;
+}
+
+.zone-pixel9 {
+  top: 27%;
+  right: 16%;
+}
+
+.zone-pixel11 {
+  top: 75%;
+  right: 50%;
+}
+
+
+   /*PIXELLL  Positions zones - corps-dos */
+   .zone-pixel-epaule-g {
+    top: 22%;
+    right: 40%;
+  }
+
+  .zone-dos-pixel {
+    top: 29%;
+    right: 27%;
+  }
+
+  .zone-pixel-dos-danger{
+    top: 27%;
+    right: 35%;
+  }
+
+  .zone-pixel-bambi-dos{
+    top: 21%;
+    right: 46%;
+  }
+
+  .zone-pixel2{
+    top: 30%;
+    right: 05%;
+  }
+
+  .zone-pixel4 {
+    top: 25%;
+    right: 27%;
+  }
+
+  .zone-pixel5 {
+    top: 40%;
+    right: 30%;
+  }
+
+
+
+  .zone-pixel7 {
+    top: 18%;
+    right: 27%;
+  }
+
+
+
+  /*PIXELLL/CP437!!  Positions zones - corps-face */
+  .zone-signature-pixel-g{
+    top: 25%;
+    right: 65%; 
+  }
+  .zone-pixel10{
+    top: 35%;
+    right: 27%; 
+  }
+
+
+   /*HALFTONE  Positions zones - corps-face */
+ .zone-half-bras-g{
+  top: 29%;
+  right: 69%; 
+}
+
+.zone-half-bras-g2{
+  top: 24%;
+  right: 63%; 
+}
+
+.zone-half-bras-g3{
+  top: 36%;
+  right: 75%; 
+}
+
+.zone-half-ventre{
+  top: 38%;
+  right: 42%; 
+}
+
+.zone-half10{
+  top: 53%;
+  right: 52%; 
+}
+
+.zone-half11{
+  top: 33%;
+  right: 70%; 
+}
+
+.zone-half13{
+  top: 18%;
+  right: 26%; 
+}
+
+.zone-half14{
+  top: 19%;
+  right: 60%; 
+}
+
+.zone-half16{
+  top: 19%;
+  right: 67%; 
+}
+
+ /*HALFTONE  Positions zones - corps-dos */
+ .zone-half-dos{
+  top: 28%;
+  right: 37%; 
+}
+
+.zone-half-dos2{
+  top: 30%;
+  right: 27%; 
+}
+
+.zone-half12{
+  top: 23%;
+  right: 10%; 
+}
+
+.zone-half15{
+  top: 20%;
+  right: 40%; 
+}
+
+/*HALFTONE/ASCII!!  Positions zones - corps-dos */
+
+
+ /*CP437  Positions zones - corps-face */
+ 
+
+ /*CP437//ASCII  Positions zones - corps-face */
+
+ .zone-CP4372{
+  top: 35%;
+  right: 11%; 
+}
+
+.zone-CP4373{
+  top: 80%;
+  right: 55%; 
+}
+
+ /*CP437  Positions zones - corps-dos */
+
+.zone-cp4371{
+  top: 20%;
+  right: 27%; 
+}
+.zone-CP4374{
+  top: 49%;
+  left: 99%; 
+}
+
+
+ /*DITHERING  Positions zones - corps-Face */
+ .zone-dither2{
+  top: 54%;
+  right: 55%; 
+}
+
+.zone-dither4{
+  top: 20%;
+  right: 18%; 
+}
+
+.zone-dither5{
+  top: 35%;
+  right: 70%; 
+}
+
+.zone-dither6{
+  top: 26%;
+  right: 19%; 
+}
+
+
+
+    /*DITHERING  Positions zones - corps-dos */
+  .zone-bit-cheval{
+    top: 27%;
+    right: 45%;
+  }
+
+  .zone-dither1{
+    top: 39%;
+    right: 25%;
+  }
+
+  .zone-dither-kiss{
+    top: 45%;
+    right: 15%;
+  }
+
+  .zone-dither3{
+    top: 35%;
+    right: 35%;
+  }
+
+  .zone-dither-marylin{
+    top: 47%;
+    right: 36%;
+  }
+  
+
+
+  /* Positions images-centres*/
+  .image-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    max-width: 100vw;
+    max-height: 80vh;
+    background-color: transparent;
+  }
+  
+  
+  .image-popup img {
+        width: auto;
+        height: auto;
+        max-height: 70vh; /* ✅ réduite à 70% de la hauteur de la fenêtre */
+        object-fit: contain;
+        display: block;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .image-popup.active {
+    display: block;
+  }
+  
+  .image-popup.hover-preview {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 20;
+  }
+  
+
+  
+  .zone.highlight {
+    outline: 3px solid #ff0; /* ou glow */
+    animation: highlightblink 1s infinite alternate;
+  }
+  
+  @keyframes highlightblink {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+  
+  
